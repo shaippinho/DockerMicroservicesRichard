@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  cadastroproduto:
+    image: ${DOCKER_REGISTRY-}cadastroproduto
+    build:
+      context: .
+      dockerfile: CadastroProduto/Dockerfile
