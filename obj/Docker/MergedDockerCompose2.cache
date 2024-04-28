@@ -1,0 +1,95 @@
+name: dockercompose4211038798307402717
+services:
+  apirefit:
+    build:
+      context: F:\Projetos\DockerMicroservices
+      dockerfile: APIRefit\Dockerfile
+    container_name: apiRefit
+    depends_on:
+      sqlserver:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    expose:
+      - "5000"
+    image: api-refit
+    networks:
+      local: null
+    ports:
+      - mode: ingress
+        target: 5000
+        published: "5000"
+        protocol: tcp
+  cadastroproduto:
+    build:
+      context: F:\Projetos\DockerMicroservices
+      dockerfile: CadastroProduto\Dockerfile
+    container_name: cadastroProduto
+    depends_on:
+      sqlserver:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    expose:
+      - "80"
+    image: api-cadastroproduto
+    networks:
+      local: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "8080"
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        published: "8081"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\richa\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\richa\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  sqlserver:
+    command:
+      - /bin/bash
+      - -c
+      - sleep 30 && /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '123' -d master -i /scripts/CriarBancoEstoque.sql
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: "123"
+    expose:
+      - "1433"
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+      local: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "1433"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: F:\Projetos\DockerMicroservices\volumes
+        target: /var/opt/mssql
+        bind:
+          create_host_path: true
+      - type: bind
+        source: F:\Projetos\DockerMicroservices\CriarBancoEstoque.sql
+        target: /scripts
+        bind:
+          create_host_path: true
+networks:
+  local:
+    name: local

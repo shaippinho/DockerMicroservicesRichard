@@ -1,35 +1,44 @@
 version: '3.4'
 
-volumes:
-      produtosdata:
-
 networks:
-       apirest:    
-       backend:    
-   
+  local:
+    name: local       
+
 services:
 
       sqlserver:
+            container_name: sqlserver
             image: "mcr.microsoft.com/mssql/server:2022-latest"   
             volumes:
-               - produtosdata:/var/opt/mssql
+               - .\volumes:/var/opt/mssql
+               - .\CriarBancoEstoque.sql:/scripts/            
+            command: /bin/bash -c "sleep 30 && /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '123' -d master -i /scripts/CriarBancoEstoque.sql"
             networks:
-              - backend
+              - local
+            ports:
+              - 1433:1433
+            expose:
+              - 1433
             environment:
-              - 'ACCEPT_EULA=SIM'
-              - 'MSSQL_SA_PASSWORD=123'
-              - 'MSSQL_PID=Developer'
+               ACCEPT_EULA: 'Y'
+               MSSQL_SA_PASSWORD : '123'
+               MSSQL_PID : 'Developer'
+
       apirefit:
+       image: api-refit
+       container_name: apiRefit
        build:
          context: .
-         dockerfile: Dockerfile
+         dockerfile: APIRefit\Dockerfile
        networks:
-           - backend
+         - local
        ports:
-         - 5000:80
+         - 5000:5000
+       expose:
+         - 5000
        environment:
-          - DHOST=sqlserver
+         - ASPNETCORE_ENVIRONMENT=Development 
        depends_on:
-          - sqlserver
+         - sqlserver
 
     

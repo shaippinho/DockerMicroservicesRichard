@@ -15,6 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIRefit", "APIRefit\APIRef
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D0F1AA7E-E7F9-4BCF-B9EC-58A2B3D5CECF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scriptsBanco", "scriptsBanco", "{6086714B-8422-4AA5-8F4C-B91CF8E9B40A}"
+	ProjectSection(SolutionItems) = preProject
+		CriarBancoEstoque.sql = CriarBancoEstoque.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

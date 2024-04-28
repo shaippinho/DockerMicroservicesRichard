@@ -45,3 +45,4 @@ F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\refint\Cadastro
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.pdb
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.genruntimeconfig.cache
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\ref\CadastroProduto.dll
+F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.sourcelink.json
