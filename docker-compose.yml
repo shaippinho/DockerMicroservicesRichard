@@ -1,28 +1,47 @@
 version: '3.4'
 
 networks:
-  local:
-    name: local       
+  rederefit:
+      driver: bridge
+      ipam:
+          driver: default
+          config:
+              - subnet: "172.18.0.0/16"
+
 
 services:
 
       sqlserver:
             container_name: sqlserver
+            hostname: hostsqlserver
             image: "mcr.microsoft.com/mssql/server:2022-latest"   
             volumes:
-               - .\volumes:/var/opt/mssql
-               - .\CriarBancoEstoque.sql:/scripts/            
-            command: /bin/bash -c "sleep 30 && /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '123' -d master -i /scripts/CriarBancoEstoque.sql"
-            networks:
-              - local
+               - F:\Projetos\DockerMicroservices\volumes:/var/opt/mssql/data
+               - F:\Projetos\DockerMicroservices\CriarBancoEstoque.sql:/scripts/CriarBancoEstoque.sql
             ports:
               - 1433:1433
             expose:
               - 1433
             environment:
                ACCEPT_EULA: 'Y'
-               MSSQL_SA_PASSWORD : '123'
+               MSSQL_SA_PASSWORD : 'cadastroprodutos123!'
                MSSQL_PID : 'Developer'
+            networks:
+               rederefit:
+                ipv4_address: 172.18.0.6
+
+
+      mssqltools:
+            image: mcr.microsoft.com/mssql-tools
+            depends_on:
+             - sqlserver
+            volumes:
+             - F:\Projetos\DockerMicroservices\CriarBancoEstoque.sql:/tmp/CriarBancoEstoque.sql  
+            command: /bin/bash -c "sleep 40 && /opt/mssql-tools/bin/sqlcmd -S sqlserver -U SA -P cadastroprodutos123! -d master -i /tmp/CriarBancoEstoque.sql"
+            networks:
+              rederefit:
+               ipv4_address: 172.18.0.7
+
 
       apirefit:
        image: api-refit
@@ -30,15 +49,12 @@ services:
        build:
          context: .
          dockerfile: APIRefit\Dockerfile
-       networks:
-         - local
        ports:
-         - 5000:5000
-       expose:
-         - 5000
-       environment:
-         - ASPNETCORE_ENVIRONMENT=Development 
+       - "5000:5000"
        depends_on:
          - sqlserver
+       networks:
+         rederefit:
+          ipv4_address: 172.18.0.4
 
     

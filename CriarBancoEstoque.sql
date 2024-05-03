@@ -2,7 +2,7 @@
 BEGIN
     CREATE DATABASE Estoque
 END
-
+go
 
 USE Estoque
 IF NOT EXISTS(SELECT * FROM information_schema.tables WHERE table_name = 'Produtos')
@@ -13,7 +13,7 @@ BEGIN
     [nu_valor] NUMERIC NOT NULL,
     CONSTRAINT [PK_Produtos] PRIMARY KEY ([id_produto]))
 END
-
+go
 
 
 

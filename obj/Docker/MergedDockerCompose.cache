@@ -9,11 +9,10 @@ services:
       sqlserver:
         condition: service_started
         required: true
-    environment:
-      ASPNETCORE_ENVIRONMENT: Development
     image: api-refit
     networks:
-      local: null
+      rederefit:
+        ipv4_address: 172.18.0.4
     ports:
       - mode: ingress
         target: 5000
@@ -28,48 +27,47 @@ services:
       sqlserver:
         condition: service_started
         required: true
-    environment:
-      ASPNETCORE_ENVIRONMENT: Development
     image: api-cadastroproduto
     networks:
-      local: null
+      rederefit:
+        ipv4_address: 172.18.0.5
     ports:
       - mode: ingress
-        target: 80
-        published: "8080"
+        target: 5010
+        published: "5010"
         protocol: tcp
-      - mode: ingress
-        target: 443
-        published: "8081"
-        protocol: tcp
-    volumes:
-      - type: bind
-        source: C:\Users\richa\AppData\Roaming/Microsoft/UserSecrets
-        target: /home/app/.microsoft/usersecrets
-        read_only: true
-        bind:
-          create_host_path: true
-      - type: bind
-        source: C:\Users\richa\AppData\Roaming/ASP.NET/Https
-        target: /home/app/.aspnet/https
-        read_only: true
-        bind:
-          create_host_path: true
-  sqlserver:
+  mssqltools:
     command:
       - /bin/bash
       - -c
-      - sleep 30 && /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '123' -d master -i /scripts/CriarBancoEstoque.sql
+      - sleep 40 && /opt/mssql-tools/bin/sqlcmd -S sqlserver -U SA -P cadastroprodutos123! -d master -i /tmp/CriarBancoEstoque.sql
+    depends_on:
+      sqlserver:
+        condition: service_started
+        required: true
+    image: mcr.microsoft.com/mssql-tools
+    networks:
+      rederefit:
+        ipv4_address: 172.18.0.7
+    volumes:
+      - type: bind
+        source: F:\Projetos\DockerMicroservices\CriarBancoEstoque.sql
+        target: /tmp/CriarBancoEstoque.sql
+        bind:
+          create_host_path: true
+  sqlserver:
     container_name: sqlserver
     environment:
       ACCEPT_EULA: "Y"
       MSSQL_PID: Developer
-      MSSQL_SA_PASSWORD: "123"
+      MSSQL_SA_PASSWORD: cadastroprodutos123!
     expose:
       - "1433"
+    hostname: hostsqlserver
     image: mcr.microsoft.com/mssql/server:2022-latest
     networks:
-      local: null
+      rederefit:
+        ipv4_address: 172.18.0.6
     ports:
       - mode: ingress
         target: 1433
@@ -78,14 +76,19 @@ services:
     volumes:
       - type: bind
         source: F:\Projetos\DockerMicroservices\volumes
-        target: /var/opt/mssql
+        target: /var/opt/mssql/data
         bind:
           create_host_path: true
       - type: bind
         source: F:\Projetos\DockerMicroservices\CriarBancoEstoque.sql
-        target: /scripts
+        target: /scripts/CriarBancoEstoque.sql
         bind:
           create_host_path: true
 networks:
-  local:
-    name: local
+  rederefit:
+    name: dockercompose4211038798307402717_rederefit
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/16

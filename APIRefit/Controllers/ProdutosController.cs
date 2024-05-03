@@ -30,12 +30,19 @@ namespace APIRefit.Controllers
         [HttpGet]
         public async Task<IActionResult> ObterProdutos()
         {
-            var resulta = await _produtoRefit.ObterProdutos().ConfigureAwait(false);
+            try
+            {
+                var resulta = await _produtoRefit.ObterProdutos().ConfigureAwait(false);
 
-            if (resulta is null)
-                return NotFound();
+                if (resulta is null)
+                    return NotFound();
 
-            return Ok(resulta);
+                return Ok(resulta);
+            }
+            catch(Exception exe)
+            {
+                return BadRequest();
+            }
         }
 
         [HttpPost]

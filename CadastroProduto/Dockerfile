@@ -3,13 +3,15 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["CadastroProduto/CadastroProduto.csproj", "CadastroProduto/"]
+COPY ["Negocio/Negocio.csproj", "Negocio/"]
+COPY ["AcessoDados/AcessoDados.csproj", "AcessoDados/"]
+COPY ["Dominio/Dominio.csproj", "Dominio/"]
 RUN dotnet restore "./CadastroProduto/./CadastroProduto.csproj"
 COPY . .
 WORKDIR "/src/CadastroProduto"

@@ -26,7 +26,8 @@ namespace AcessoDados.AcessoBanco
         {
             using IDbConnection connection = new SqlConnection(_config.GetConnectionString(connectionName));
 
-            return await connection.QueryAsync<T>(consulta, parameters, commandType: CommandType.StoredProcedure);
+
+            return (await connection.QueryAsync<T>(consulta, parameters, commandType: CommandType.Text)).ToList();
         }
 
         public async Task SalvarDados<T>(
@@ -36,7 +37,7 @@ namespace AcessoDados.AcessoBanco
         {
             using IDbConnection connection = new SqlConnection(_config.GetConnectionString(connectionName));
 
-            await connection.ExecuteAsync(consulta, parameters, commandType: CommandType.StoredProcedure);
+            await connection.ExecuteAsync(consulta, parameters, commandType: CommandType.Text);
         }
 
     }

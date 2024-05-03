@@ -31,6 +31,7 @@ F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.csproj.CoreCompileInputs.cache
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.MvcApplicationPartsAssemblyInfo.cs
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.MvcApplicationPartsAssemblyInfo.cache
+F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.sourcelink.json
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\staticwebassets.build.json
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\staticwebassets.development.json
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\staticwebassets\msbuild.CadastroProduto.Microsoft.AspNetCore.StaticWebAssets.props
@@ -45,4 +46,3 @@ F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\refint\Cadastro
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.pdb
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.genruntimeconfig.cache
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\ref\CadastroProduto.dll
-F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.sourcelink.json

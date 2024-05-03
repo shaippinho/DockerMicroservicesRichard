@@ -26,7 +26,7 @@ namespace Negocio.Servicos
         }
 
         public Task InserirProduto(Produto produto) =>
-            _db.SalvarDados("insert into dbo.Produtos (nm_produto, nu_valor) values (@nome, @valor);", new { produto.nome, produto.valor });
+            _db.SalvarDados("insert into dbo.Produtos (nm_produto, nu_valor) values (@nome, @valor);", new {produto.nome, produto.valor });
 
         public Task AtualizarProduto(Produto produto) =>
             _db.SalvarDados("update produtos set nm_produto = @nome, nu_valor = @valor where id_produto = @Id", produto);

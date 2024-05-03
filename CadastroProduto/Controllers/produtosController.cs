@@ -59,6 +59,7 @@ namespace CadastroProduto.Controllers
             {
                 await data.InserirProduto(produto);
 
+
                 return Results.Ok("O produto foi inserido com sucesso!");
             }
             catch (Exception ex)

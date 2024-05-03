@@ -1,21 +1,16 @@
 version: '3.4'
 
 services:
-
   cadastroproduto:
     image: api-cadastroproduto
     container_name: cadastroProduto
     build:
       context: .
       dockerfile: CadastroProduto\Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "8080:80"
-      - "8081:443"
-    expose:
-      - 8080
-    networks:
-      - local
+    - "5010:5010"
     depends_on:
       - sqlserver
+    networks:
+        rederefit:
+         ipv4_address: 172.18.0.5

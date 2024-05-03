@@ -31,6 +31,7 @@ F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.AssemblyInfo.
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.csproj.CoreCompileInputs.cache
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.MvcApplicationPartsAssemblyInfo.cs
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.MvcApplicationPartsAssemblyInfo.cache
+F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.sourcelink.json
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\staticwebassets.build.json
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\staticwebassets.development.json
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\staticwebassets\msbuild.APIRefit.Microsoft.AspNetCore.StaticWebAssets.props
@@ -45,4 +46,3 @@ F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\refint\APIRefit.dll
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.pdb
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.genruntimeconfig.cache
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\ref\APIRefit.dll
-F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.sourcelink.json

@@ -6,6 +6,7 @@ F:\Projetos\DockerMicroservices\AcessoDados\obj\Debug\net8.0\AcessoDados.Generat
 F:\Projetos\DockerMicroservices\AcessoDados\obj\Debug\net8.0\AcessoDados.AssemblyInfoInputs.cache
 F:\Projetos\DockerMicroservices\AcessoDados\obj\Debug\net8.0\AcessoDados.AssemblyInfo.cs
 F:\Projetos\DockerMicroservices\AcessoDados\obj\Debug\net8.0\AcessoDados.csproj.CoreCompileInputs.cache
+F:\Projetos\DockerMicroservices\AcessoDados\obj\Debug\net8.0\AcessoDados.sourcelink.json
 F:\Projetos\DockerMicroservices\AcessoDados\obj\Debug\net8.0\AcessoDados.dll
 F:\Projetos\DockerMicroservices\AcessoDados\obj\Debug\net8.0\refint\AcessoDados.dll
 F:\Projetos\DockerMicroservices\AcessoDados\obj\Debug\net8.0\AcessoDados.pdb

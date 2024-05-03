@@ -18,8 +18,10 @@ namespace Negocio.Extensoes
         {
             var baseUrlCadastroProduto = configuration[ConfigExternalCadastroProduto];
 
+#pragma warning disable CS8604 // Possível argumento de referência nula.
             services.AddRefitClient<IProdutoRefit>()
                 .ConfigureHttpClient(config => config.BaseAddress = new Uri(baseUrlCadastroProduto));
+#pragma warning restore CS8604 // Possível argumento de referência nula.
 
             return services;
         }

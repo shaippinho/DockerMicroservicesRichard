@@ -3,8 +3,27 @@
     "Docker Compose": {
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "apirefit",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
       "serviceActions": {
-        "cadastroproduto": "StartDebugging"
+        "cadastroproduto": "StartDebugging",
+        "apirefit": "StartDebugging",
+        "mssqltools": "StartWithoutDebugging",
+        "sqlserver": "StartWithoutDebugging"
+      }
+    },
+    "Docker Compose 2": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "cadastroproduto",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
+      "serviceActions": {
+        "apirefit": "StartDebugging",
+        "cadastroproduto": "StartDebugging",
+        "mssqltools": "StartWithoutDebugging",
+        "sqlserver": "StartWithoutDebugging"
       }
     }
   }

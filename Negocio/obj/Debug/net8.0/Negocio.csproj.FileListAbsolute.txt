@@ -10,6 +10,7 @@ F:\Projetos\DockerMicroservices\Negocio\obj\Debug\net8.0\Negocio.GeneratedMSBuil
 F:\Projetos\DockerMicroservices\Negocio\obj\Debug\net8.0\Negocio.AssemblyInfoInputs.cache
 F:\Projetos\DockerMicroservices\Negocio\obj\Debug\net8.0\Negocio.AssemblyInfo.cs
 F:\Projetos\DockerMicroservices\Negocio\obj\Debug\net8.0\Negocio.csproj.CoreCompileInputs.cache
+F:\Projetos\DockerMicroservices\Negocio\obj\Debug\net8.0\Negocio.sourcelink.json
 F:\Projetos\DockerMicroservices\Negocio\obj\Debug\net8.0\Negocio.csproj.CopyComplete
 F:\Projetos\DockerMicroservices\Negocio\obj\Debug\net8.0\Negocio.dll
 F:\Projetos\DockerMicroservices\Negocio\obj\Debug\net8.0\refint\Negocio.dll
