@@ -4,11 +4,12 @@ services:
     build:
       context: F:\Projetos\DockerMicroservices
       dockerfile: APIRefit\Dockerfile
+    command:
+      - /bin/bash
+      - -c
+      - sleep 30
     container_name: apiRefit
     depends_on:
-      mssqltools:
-        condition: service_started
-        required: true
       sqlserver:
         condition: service_started
         required: true
@@ -43,7 +44,7 @@ services:
     command:
       - /bin/bash
       - -c
-      - sleep 40 && /opt/mssql-tools/bin/sqlcmd -S sqlserver -U SA -P cadastroprodutos123! -d master -i /tmp/CriarBancoEstoque.sql
+      - /opt/mssql-tools/bin/sqlcmd -S sqlserver -U SA -P cadastroprodutos123! -d master -i /tmp/CriarBancoEstoque.sql
     depends_on:
       sqlserver:
         condition: service_started

@@ -1,5 +1,7 @@
+using Dominio.Interfaces;
 using Microsoft.OpenApi.Models;
 using Negocio.Extensoes;
+using Negocio.Servicos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,7 @@ builder.Services.AddSwaggerGen(c =>
     c.ResolveConflictingActions(x => x.First());
 
 });
+builder.Services.AddSingleton<IProdutoData, ProdutoData>();
 
 var app = builder.Build();
 

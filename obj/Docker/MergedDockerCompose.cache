@@ -40,7 +40,7 @@ services:
     command:
       - /bin/bash
       - -c
-      - sleep 40 && /opt/mssql-tools/bin/sqlcmd -S sqlserver -U SA -P cadastroprodutos123! -d master -i /tmp/CriarBancoEstoque.sql
+      - sleep 30 && /opt/mssql-tools/bin/sqlcmd -S sqlserver -U SA -P cadastroprodutos123! -d master -i /tmp/CriarBancoEstoque.sql
     depends_on:
       sqlserver:
         condition: service_started

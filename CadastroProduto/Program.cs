@@ -1,5 +1,6 @@
 using AcessoDados.AcessoBanco;
 using CadastroProduto.Controllers;
+using Dominio.Interfaces;
 using Microsoft.OpenApi.Models;
 using Negocio.Servicos;
 

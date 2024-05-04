@@ -1,6 +1,5 @@
-﻿using Dominio.Entidades;
-using Dominio.Interfaces;
-using Microsoft.AspNetCore.Http;
+﻿using AcessoDados.Interfaces;
+using Dominio.Entidades;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APIRefit.Controllers
@@ -19,12 +18,12 @@ namespace APIRefit.Controllers
         [Route("Id")]
         public async Task<IActionResult> ObterProdutosPorId(int Id)
         {
-            var resulta = await _produtoRefit.ObterProdutoPorId(Id).ConfigureAwait(false);
+            var result = await _produtoRefit.ObterProduto(Id).ConfigureAwait(false);
 
-            if (resulta is null)
+            if (result is null)
                 return NotFound();
 
-            return Ok(resulta);
+            return Ok(result);
         }
 
         [HttpGet]
@@ -32,12 +31,12 @@ namespace APIRefit.Controllers
         {
             try
             {
-                var resulta = await _produtoRefit.ObterProdutos().ConfigureAwait(false);
+                var result = await _produtoRefit.ObterProdutos().ConfigureAwait(false);
 
-                if (resulta is null)
+                if (result is null)
                     return NotFound();
 
-                return Ok(resulta);
+                return Ok(result);
             }
             catch(Exception exe)
             {
@@ -48,19 +47,19 @@ namespace APIRefit.Controllers
         [HttpPost]
         public async Task<IActionResult> InserirProduto(Produto produto)
         {
-            var resulta = await _produtoRefit.InserirProduto(produto).ConfigureAwait(false);
+            var result = await _produtoRefit.InserirProduto(produto).ConfigureAwait(false);
 
-            if (resulta is null)
+            if (result is null)
                 return NotFound();
 
-            return Ok(resulta);
+            return Ok(result);
         }
 
 
         [HttpPut]
         public async Task<IActionResult> AtualizarProduto(Produto produto)
         {
-            var resulta = await _produtoRefit.AlterarProduto(produto).ConfigureAwait(false);
+            var resulta = await _produtoRefit.AtualizarProduto(produto).ConfigureAwait(false);
 
             if (resulta is null)
                 return NotFound();
@@ -73,12 +72,12 @@ namespace APIRefit.Controllers
         [Route("Id")]
         public async Task<IActionResult> DeletarProduto(int Id)
         {
-            var resulta = await _produtoRefit.DeletarProdutoPorId(Id).ConfigureAwait(false);
+            var result = await _produtoRefit.DeletarProduto(Id).ConfigureAwait(false);
 
-            if (resulta is null)
+            if (result is null)
                 return NotFound();
 
-            return Ok(resulta);
+            return Ok(result);
         }
 
     }

@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "MaIyrEKrejSaMNsj8a1+dTRJ+eC+pRWIEX7WUqp0MfJx41mM3VTUksb89n/llJLTHPXbZY+3c93BDncy22t64w==",
+  "dgSpecHash": "NFAGME0WK4q8NSSKioa804mqw/QCJgkuwGkg6YJrzC9nL6klG+V8+/OUABoEMdIyo8e4drnetLjQOq5RLMdtPA==",
   "success": true,
   "projectFilePath": "F:\\Projetos\\DockerMicroservices\\Negocio\\Negocio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\richa\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\richa\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\richa\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
-    "C:\\Users\\richa\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\richa\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\richa\\.nuget\\packages\\microsoft.extensions.http\\7.0.0\\microsoft.extensions.http.7.0.0.nupkg.sha512",
     "C:\\Users\\richa\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\richa\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",

@@ -6,6 +6,7 @@ F:\Projetos\DockerMicroservices\APIRefit\bin\Debug\net8.0\APIRefit.runtimeconfig
 F:\Projetos\DockerMicroservices\APIRefit\bin\Debug\net8.0\APIRefit.dll
 F:\Projetos\DockerMicroservices\APIRefit\bin\Debug\net8.0\APIRefit.pdb
 F:\Projetos\DockerMicroservices\APIRefit\bin\Debug\net8.0\Dapper.dll
+F:\Projetos\DockerMicroservices\APIRefit\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 F:\Projetos\DockerMicroservices\APIRefit\bin\Debug\net8.0\Microsoft.OpenApi.dll
 F:\Projetos\DockerMicroservices\APIRefit\bin\Debug\net8.0\Refit.dll
 F:\Projetos\DockerMicroservices\APIRefit\bin\Debug\net8.0\Refit.HttpClientFactory.dll
@@ -29,6 +30,7 @@ F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.GeneratedMSBu
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.AssemblyInfoInputs.cache
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.AssemblyInfo.cs
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.csproj.CoreCompileInputs.cache
+F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.MvcApplicationPartsAssemblyInfo.cs
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.MvcApplicationPartsAssemblyInfo.cache
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\APIRefit.sourcelink.json
 F:\Projetos\DockerMicroservices\APIRefit\obj\Debug\net8.0\staticwebassets.build.json
