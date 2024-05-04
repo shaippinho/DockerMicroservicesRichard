@@ -36,7 +36,7 @@ services:
              - sqlserver
             volumes:
              - F:\Projetos\DockerMicroservices\CriarBancoEstoque.sql:/tmp/CriarBancoEstoque.sql  
-            command: /bin/bash -c "sleep 30 && /opt/mssql-tools/bin/sqlcmd -S sqlserver -U SA -P cadastroprodutos123! -d master -i /tmp/CriarBancoEstoque.sql"
+            command: /bin/bash -c "sleep 70 && /opt/mssql-tools/bin/sqlcmd -S sqlserver -U SA -P cadastroprodutos123! -d master -i /tmp/CriarBancoEstoque.sql"
             networks:
               rederefit:
                ipv4_address: 172.18.0.7
