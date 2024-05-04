@@ -27,7 +27,7 @@ namespace AcessoDados.AcessoBanco
             using IDbConnection connection = new SqlConnection(_config.GetConnectionString(connectionName));
 
 
-            return (await connection.QueryAsync<T>(consulta, parameters, commandType: CommandType.Text)).ToList();
+            return await connection.QueryAsync<T>(consulta, parameters, commandType: CommandType.Text);
         }
 
         public async Task SalvarDados<T>(

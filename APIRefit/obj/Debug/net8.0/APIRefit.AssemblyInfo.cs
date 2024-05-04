@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APIRefit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+435db658158d24b046fed3822a1f7701995296ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6d0e94500a3a4c29c834b1bf2ef0f49694f235f")]
 [assembly: System.Reflection.AssemblyProductAttribute("APIRefit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APIRefit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

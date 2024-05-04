@@ -1,22 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Dominio.Entidades
 {
-    [Table("Produtos")]
     public class Produto
     {
-        [Column("id_produto")]
-        public int Id { get; set; }
+        public int idproduto { get; set; }
 
-        [Column("nm_produto")]
-        public required string nome { get; set; }
+        public  string nmproduto { get; set; }
 
-        [Column("nu_valor")]
-        public Decimal valor { get; set; }
+        public decimal nuvalor { get; set; }
     }
 }

@@ -29,7 +29,6 @@ F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.AssemblyInfoInputs.cache
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.AssemblyInfo.cs
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.csproj.CoreCompileInputs.cache
-F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.MvcApplicationPartsAssemblyInfo.cs
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.MvcApplicationPartsAssemblyInfo.cache
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\CadastroProduto.sourcelink.json
 F:\Projetos\DockerMicroservices\CadastroProduto\obj\Debug\net8.0\staticwebassets.build.json

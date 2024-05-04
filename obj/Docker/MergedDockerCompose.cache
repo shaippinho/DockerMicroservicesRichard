@@ -79,11 +79,6 @@ services:
         target: /var/opt/mssql/data
         bind:
           create_host_path: true
-      - type: bind
-        source: F:\Projetos\DockerMicroservices\CriarBancoEstoque.sql
-        target: /scripts/CriarBancoEstoque.sql
-        bind:
-          create_host_path: true
 networks:
   rederefit:
     name: dockercompose4211038798307402717_rederefit

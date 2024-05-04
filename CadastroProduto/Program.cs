@@ -16,20 +16,16 @@ builder.Services.AddSingleton<IProdutoData, ProdutoData>();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "CadastroProduto", Version = "v1" });
+    c.ResolveConflictingActions(x => x.First());
 });
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
-//app.UseSwagger();
-//app.UseSwaggerUI();
-//}
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+
 });
 
 app.UseAuthorization();
