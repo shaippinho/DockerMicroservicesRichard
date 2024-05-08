@@ -64,7 +64,7 @@ $ git clone [https://github.com/richardvepogg/DockerMicroservices.git]
 2-Acesse a solução com Visual Studio.</p>
 <br>
 
-<p>💻 Passos criação dos containers
+<p>💻 Passos para a criação dos containers
 <br>  
 1-Executar Docker Desktop.
 <br>  
@@ -90,7 +90,7 @@ O servidor (APIRefit) inciará na porta:5000 - acesse http://localhost:5000/swag
 
 ![msqtoolsfalhaEstoque](https://github.com/richardvepogg/DockerMicroservices/assets/34971908/0a6da006-ebbd-472d-8b54-7d2c73d07d04)
 <br>
-Clicar em detalhes do container e depois ir na seção "Logs"
+Clicar em detalhes do container e depois na seção "Logs"
 <br>
 <p>O problema ocorre quando o serviço "sqlserver" não terminou de criar todos bancos de dados do sistema e o serviço mssqltools tenta criar o banco "Estoque",
 <br>
