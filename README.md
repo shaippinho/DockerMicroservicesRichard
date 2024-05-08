@@ -101,5 +101,5 @@ Clicar em detalhes do container e depois ir na seção "Logs"
 
 ![DetalhesContainerEstoqueOK](https://github.com/richardvepogg/DockerMicroservices/assets/34971908/e8231b66-ee4c-48f1-b27d-124baae87098)
 
-<p>Caso o mensagem de erro de login persista aumente o tempo.<p>
+<p>Caso o mensagem de erro de login persista, aumente o tempo.<p>
 
