@@ -69,9 +69,37 @@ $ git clone [https://github.com/richardvepogg/DockerMicroservices.git]
 <br>  
 1-Executar Docker Desktop.
 <br>  
-2-No depurador (Visual Studio) selecione o docker compose e execute.</p>
+2-No depurador (Visual Studio) selecione o docker compose e execute.
 <br>  
-
+3-Esperar o serviço do mssqltools ser encerrado, esse serviço cria o banco de dados "Estoque"
+<br>
+  
+![containermsqtoolsdesativado](https://github.com/richardvepogg/DockerMicroservices/assets/34971908/6689093b-d90a-480c-9034-aceae314d54f)
+<br>
+Encerramento do container pode ser observado no Docker Desktop
+</p>
+<br>
 <p>O servidor (CadastroProduto) inciará na porta:5010 - acesse http://localhost:5010/swagger
+ 
 <br>  
 O servidor (APIRefit) inciará na porta:5000 - acesse http://localhost:5000/swagger</p>
+<br>
+
+<p>🛠 Solução de Problemas:</p> 
+<br>
+<p>1-Erro ao se conectar utilizando usuário "SA"</p>
+
+![msqtoolsfalhaEstoque](https://github.com/richardvepogg/DockerMicroservices/assets/34971908/0a6da006-ebbd-472d-8b54-7d2c73d07d04)
+<br>
+Clicar em detalhes do container e depois ir na seção "Logs"
+<br>
+<p>O problema ocorre quando o serviço "sqlserver" não terminou de criar todos bancos de dados do sistema e o serviço mssqltools tenta criar o banco "Estoque",
+<br>
+<p>a-Acesse o arquivo do "docker-compose.yml"</p>
+<p>b-No serviço "mssqltools" na seção "command" "../bin/bash -c "sleep 70..", aumente o tempo de espera, exemplo: de 70 para 100.</p>
+<p>Assim o banco deve ser criado normalmente como no exemplo a seguir:</p>
+
+![DetalhesContainerEstoqueOK](https://github.com/richardvepogg/DockerMicroservices/assets/34971908/e8231b66-ee4c-48f1-b27d-124baae87098)
+
+<p>Caso o mensagem de erro de login persista aumente o tempo.<p>
+
