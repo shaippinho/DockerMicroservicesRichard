@@ -1,3 +1,4 @@
+using APIRefit.Controllers;
 using Dominio.Interfaces;
 using Microsoft.OpenApi.Models;
 using Negocio.Extensoes;
@@ -27,5 +28,5 @@ app.UseSwaggerUI(c =>
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.ConfigureApi();
 app.Run();

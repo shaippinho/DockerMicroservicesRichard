@@ -51,7 +51,7 @@ services:
         ipv4_address: 172.18.0.7
     volumes:
       - type: bind
-        source: F:\Projetos\CriarBancoEstoque.sql
+        source: F:\Projetos\DockerMicroservices\CriarBancoEstoque.sql
         target: /tmp/CriarBancoEstoque.sql
         bind:
           create_host_path: true
@@ -75,7 +75,7 @@ services:
         protocol: tcp
     volumes:
       - type: bind
-        source: F:\Projetos\volumes
+        source: F:\Projetos\DockerMicroservices\volumes
         target: /var/opt/mssql/data
         bind:
           create_host_path: true

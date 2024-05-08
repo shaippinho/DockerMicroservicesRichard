@@ -4,73 +4,105 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace APIRefit.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-    public class ProdutosController : ControllerBase
+    [Route("[controller]")]
+    public static class ProdutosController
     {
-        private readonly IProdutoRefit _produtoRefit;
-        public ProdutosController(IProdutoRefit produtoRefit)
+        public static void ConfigureApi(this WebApplication app)
         {
-            _produtoRefit = produtoRefit;
+            app.MapGet("/Produtos", ObterProdutos);
+            app.MapGet("/Produto/{id}", ObterProduto);
+            app.MapPost("/Produto", InserirProduto);
+            app.MapPut("/Produto", AtualizarProduto);
+            app.MapDelete("/Produto/{id}", DeletarProduto);
+
         }
+
+        [HttpGet]
+        public static async Task<IResult> ObterProdutos(IProdutoRefit _produtoRefit)
+        {
+            try
+            {
+                var produto = await _produtoRefit.ObterProdutos().ConfigureAwait(false);
+                if (produto == null) return Results.NotFound();
+
+                return Results.Ok(produto);
+            }
+            catch (Exception ex)
+            {
+
+                return Results.Problem(ex.Message);
+            }
+        }
+
 
         [HttpGet]
         [Route("Id")]
-        public async Task<IActionResult> ObterProdutosPorId(int Id)
+        private static async Task<IResult> ObterProduto(int Id, IProdutoRefit _produtoRefit)
         {
-            var result = await _produtoRefit.ObterProduto(Id).ConfigureAwait(false);
+            try
+            {
+                var produto = await _produtoRefit.ObterProduto(Id).ConfigureAwait(false);
+                if (produto == null)
+                    return Results.NotFound();
 
-            if (result is null)
-                return NotFound();
+                return Results.Ok(produto);
+            }
+            catch (Exception ex)
+            {
 
-            return Ok(result);
+                return Results.Problem(ex.Message);
+            }
         }
 
-        [HttpGet]
-        public async Task<IActionResult> ObterProdutos()
-        {
-                var result = await _produtoRefit.ObterProdutos().ConfigureAwait(false);
 
-                if (result is null)
-                    return NotFound();
-
-                return Ok(result);
-        }
 
         [HttpPost]
-        public async Task<IActionResult> InserirProduto(Produto produto)
+        private static async Task<IResult> InserirProduto(Produto produto, IProdutoRefit _produtoRefit)
         {
-            var result = await _produtoRefit.InserirProduto(produto).ConfigureAwait(false);
+            try
+            {
+                var result = await _produtoRefit.InserirProduto(produto).ConfigureAwait(false);
+                return Results.Ok(result);
+            }
+            catch (Exception ex)
+            {
 
-            if (result is null)
-                return NotFound();
-
-            return Ok(result);
+                return Results.Problem(ex.Message);
+            }
         }
 
 
         [HttpPut]
-        public async Task<IActionResult> AtualizarProduto(Produto produto)
+        private static async Task<IResult> AtualizarProduto(Produto produto, IProdutoRefit _produtoRefit)
         {
-            var resulta = await _produtoRefit.AtualizarProduto(produto).ConfigureAwait(false);
+            try
+            {
+                var result = await _produtoRefit.AtualizarProduto(produto).ConfigureAwait(false);
+                return Results.Ok(result);
+            }
+            catch (Exception ex)
+            {
 
-            if (resulta is null)
-                return NotFound();
-
-            return Ok(resulta);
+                return Results.Problem(ex.Message);
+            }
         }
 
 
         [HttpDelete]
         [Route("Id")]
-        public async Task<IActionResult> DeletarProduto(int Id)
+        private static async Task<IResult> DeletarProduto(int Id, IProdutoRefit _produtoRefit)
         {
-            var result = await _produtoRefit.DeletarProduto(Id).ConfigureAwait(false);
+            try
+            {
+                var result = await _produtoRefit.DeletarProduto(Id).ConfigureAwait(false);
+                return Results.Ok(result);
+            }
+            catch (Exception ex)
+            {
 
-            if (result is null)
-                return NotFound();
-
-            return Ok(result);
+                return Results.Problem(ex.Message);
+            }
         }
 
     }
