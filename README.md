@@ -1,5 +1,4 @@
 <h1 align="center">DockerMicroservices</h1> 
-<h4 align="center"> 🚧 Projeto em construção... 🚧</h4>
 
 <br>
 <p>Projeto foi construído para aprendizagem na construção de microsserviços com Docker e na configuração do Docker Compose, está utilizando .NET 8.
