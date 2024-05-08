@@ -31,7 +31,7 @@ volumes: Cria um volume na pasta ./DockerMicroservices\volumes para que o que fo
 <br>
 <p>👉 Status 💻
 <br>
-Serviços subiram corretamente, trabalhando na correção do método de ObterProdutos.</p>
+Projeto Finalizado, fazendo pequenos ajustes.</p>
 <br>
 
 <p>🛠 Tecnologias utilizadas
