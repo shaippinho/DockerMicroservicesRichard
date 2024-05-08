@@ -1,6 +1,5 @@
 F:\Projetos\DockerMicroservices\bin\Debug\APIRefit.deps.json
 F:\Projetos\DockerMicroservices\bin\Debug\APIRefit.runtimeconfig.json
-F:\Projetos\DockerMicroservices\bin\Debug\appsettings.Development.json
 F:\Projetos\DockerMicroservices\bin\Debug\appsettings.json
 F:\Projetos\DockerMicroservices\bin\Debug\APIRefit.exe
 F:\Projetos\DockerMicroservices\bin\Debug\CadastroProduto.deps.json

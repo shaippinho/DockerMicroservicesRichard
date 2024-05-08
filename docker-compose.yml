@@ -16,7 +16,7 @@ services:
             hostname: hostsqlserver
             image: "mcr.microsoft.com/mssql/server:2022-latest"   
             volumes:
-               - F:\Projetos\DockerMicroservices\volumes:/var/opt/mssql/data
+               - ./volumes:/var/opt/mssql/data
             ports:
               - 1433:1433
             expose:
@@ -35,7 +35,7 @@ services:
             depends_on:
              - sqlserver
             volumes:
-             - F:\Projetos\DockerMicroservices\CriarBancoEstoque.sql:/tmp/CriarBancoEstoque.sql  
+             - ./CriarBancoEstoque.sql:/tmp/CriarBancoEstoque.sql  
             command: /bin/bash -c "sleep 70 && /opt/mssql-tools/bin/sqlcmd -S sqlserver -U SA -P cadastroprodutos123! -d master -i /tmp/CriarBancoEstoque.sql"
             networks:
               rederefit:

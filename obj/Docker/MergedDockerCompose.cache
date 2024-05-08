@@ -40,7 +40,7 @@ services:
     command:
       - /bin/bash
       - -c
-      - sleep 30 && /opt/mssql-tools/bin/sqlcmd -S sqlserver -U SA -P cadastroprodutos123! -d master -i /tmp/CriarBancoEstoque.sql
+      - sleep 70 && /opt/mssql-tools/bin/sqlcmd -S sqlserver -U SA -P cadastroprodutos123! -d master -i /tmp/CriarBancoEstoque.sql
     depends_on:
       sqlserver:
         condition: service_started
@@ -51,7 +51,7 @@ services:
         ipv4_address: 172.18.0.7
     volumes:
       - type: bind
-        source: F:\Projetos\DockerMicroservices\CriarBancoEstoque.sql
+        source: F:\Projetos\CriarBancoEstoque.sql
         target: /tmp/CriarBancoEstoque.sql
         bind:
           create_host_path: true
@@ -75,7 +75,7 @@ services:
         protocol: tcp
     volumes:
       - type: bind
-        source: F:\Projetos\DockerMicroservices\volumes
+        source: F:\Projetos\volumes
         target: /var/opt/mssql/data
         bind:
           create_host_path: true

@@ -1,4 +1,3 @@
-F:\Projetos\DockerMicroservices\CadastroProduto\bin\Debug\net8.0\appsettings.Development.json
 F:\Projetos\DockerMicroservices\CadastroProduto\bin\Debug\net8.0\appsettings.json
 F:\Projetos\DockerMicroservices\CadastroProduto\bin\Debug\net8.0\CadastroProduto.exe
 F:\Projetos\DockerMicroservices\CadastroProduto\bin\Debug\net8.0\CadastroProduto.deps.json

@@ -1,4 +1,3 @@
-F:\Projetos\DockerMicroservices\APIRefit\bin\Debug\net8.0\appsettings.Development.json
 F:\Projetos\DockerMicroservices\APIRefit\bin\Debug\net8.0\appsettings.json
 F:\Projetos\DockerMicroservices\APIRefit\bin\Debug\net8.0\APIRefit.exe
 F:\Projetos\DockerMicroservices\APIRefit\bin\Debug\net8.0\APIRefit.deps.json
