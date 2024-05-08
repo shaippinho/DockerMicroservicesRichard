@@ -2,7 +2,7 @@
 
 <br>
 <p>Projeto foi construído para aprendizagem na construção de microsserviços com Docker e na configuração do Docker Compose, está utilizando .NET 8.
-Também inseri bibliotecas como Refit para consumo de API e Dapper(ORM).</p>
+Inseri bibliotecas como Refit para consumo de API e Dapper(ORM).</p>
 <br>
 
 <p> 👉 No que se baseia:
